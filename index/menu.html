@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Paec</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<script>
+    function toggleMenu() {
+    document.querySelector('.hamburger').classList.toggle('open');
+    document.getElementById('menu').classList.toggle('open');
+}
+
+
+function toggleSubmenu() {
+    document.getElementById('submenu').classList.toggle('open');
+}
+</script>
+<body>
+
+<header>
+
+    <div class="menu-container">
+     
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+              
+                <li><a href="javascript:void(0)" onclick="toggleSubmenu()">Materias</a>
+                    <ul class="submenu" id="submenu">
+                        <li><a href="matematicas.html">Matemáticas</a></li>
+                        <li><a href="ecosistemas.html">Ecosistemas</a></li>
+                        <li><a href="Humanidades.html">Humanidades</a></li>
+                        <li><a href="ingles.html">Ingles</a></li>
+                        <li><a href="lengua.html">Lengua y <br> Comunicaciones </a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+      </div>
+
+    <h1>Bienvenidos a nuestro paec</h1>
+    <p>Explora que hicimos en cada materia</p>
+</header>
+
+<nav>
+    <a href="intregrantes.html">Integrantes</a>
+    <a href="#contacto"></a>
+</nav>
+
+<div id="Actividades" class="main-content">
+
+    <!-- act 1 -->
+    <a href="matematicas.html">
+        <div class="manga-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEJ0ipUBXojHELFi2OrUm_xrO72rDvN532EQ&s" height="300" width="400" alt="actividad 1">
+            <h3> <font face=" times new roman"> <P style="color: #93be6a;"> MATEMATICAS </P> </font> </h3>
+            <p></p>
+        </div>
+    </a>
+
+    <!-- act 2 -->
+    <a href="Humanidades.html">
+        <div class="manga-item">
+            <img src="images/humanidades.png" alt="actividad 2">
+            <h3> <font face=" times new roman"> <P style="color: #93be6a;">HUMANIDADES </P> </font> </h3>
+        <p></p>
+    </div>
+    </a>
+
+    <!-- act 3 -->
+    <a href="lengua.html">
+    <div class="manga-item">
+        <img src="images/lengua.png" alt="actividad 3">
+        <h3> <font face=" times new roman"> <P style="color: #93be6a;">ESPAÑOL </P> </font> </h3>
+        <p></p>
+    </div>
+
+    <br>
+        <!-- act 4 -->
+        <a href="ciencias.html">
+        <div class="manga-item">
+            <img src="https://elobjetivo.com.ar/download/multimedia.normal.a4a55157872051d8.48756d6564616c325f6e6f726d616c2e6a7067.jpg" height="300" width="400" alt="actividad 4">
+            <h3> <font face=" times new roman"> <P style="color: #93be6a;">ECOSISTEMAS </P> </font> </h3>
+            <p></p>
+        </div>
+    
+        <!-- act 5 -->
+        <a href="ingles.html">
+        <div class="manga-item">
+            <img src="https://cdn.pixabay.com/photo/2022/12/04/11/38/english-oak-7634230_1280.jpg" height="300" width="400" alt="actividad 5">
+            <h3> <font face=" times new roman"><P style="color: #93be6a;"> INGLES </P> </font> </h3>
+            <p></p>
+        </div>
+</div>
+
+<br>
+<br>
+
+<footer>
+    <p>&copy; 2024 Página de Paec. Todos los derechos reservados a "Los tops globales".</p>
+</footer>
+
+</body>
+</html>

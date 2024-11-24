@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAEC</title>
+
+   <script>
+    
+function toggleMenu() {
+    document.querySelector('.hamburger').classList.toggle('open');
+    document.getElementById('menu').classList.toggle('open');
+}
+
+
+function toggleSubmenu() {
+    document.getElementById('submenu').classList.toggle('open');
+}
+</script>
+</head>
+
+<style>
+    /* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E0D0A3;
+    color: #333;
+    }
+
+    /* Header animado */
+    header {
+    width: 100%;
+    height: 220px;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(90deg, #3cff00, #098300, #7bff00, #037f37); /* Gradiente inicial */
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite, glowEffect 2s ease-in-out infinite alternate;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra elegante */
+    position: relative;
+    }
+
+  /* Animación del gradiente */
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Efecto de brillo */
+      @keyframes glowEffect {
+        0% {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+        }
+        100% {
+          text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+        }
+      }
+
+      /* Efecto de partículas decorativas */
+      .particle {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          animation: particleAnimation 5s linear infinite;
+      }
+
+      /* Movimiento de partículas */
+      @keyframes particleAnimation {
+          0% {
+              transform: translateY(0) scale(0.5);
+              opacity: 1;
+          }
+          100% {
+              transform: translateY(-200px) scale(1.2);
+              opacity: 0;
+          }
+      }
+
+      /* Estilo de partículas dinámicas */
+      .particle:nth-child(1) {
+          left: 10%;
+          animation-delay: 0s;
+      }
+      .particle:nth-child(2) {
+          left: 25%;
+          animation-delay: 1s;
+      }
+      .particle:nth-child(3) {
+          left: 40%;
+          animation-delay: 2s;
+      }
+      .particle:nth-child(4) {
+          left: 60%;
+          animation-delay: 3s;
+      }
+      .particle:nth-child(5) {
+          left: 80%;
+          animation-delay: 4s;
+      }
+      nav {
+      background-color: #859933;
+      overflow: hidden;
+     }
+
+     nav a {
+     color: rgb(21, 82, 9);
+     padding: 14px 20px;
+     text-decoration: none;
+     display: inline-block;
+    }
+
+     nav a:hover {
+     background-color: #6dbd43;
+    }
+    main {
+     padding: 20px;
+     background-color:  #E0D0A3;
+    }
+
+    section {
+    margin-bottom: 40px;
+    }
+
+    h2 {
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    }
+    .menu-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    }
+
+/* Botón de hamburguesa */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  
+}
+
+/* Líneas del icono de hamburguesa */
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.3s;
+}
+
+.hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menú desplegable */
+.menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: rgb(30, 141, 20);
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  transform-origin: top right;
+  overflow: hidden;
+  left: auto;
+
+}
+
+.menu.open {
+  display: block;  
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  border-bottom: 1px solid #141414;
+}
+
+.menu ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.menu ul li a:hover {
+  background: #3f3f3f;
+  color: white;
+}
+
+.submenu {
+  display: none;
+}
+
+.submenu.open {
+  display: block;
+  font-size: 10;
+}
+        /* Estilo de los párrafos con estilo manga */
+        .main-paragraph {
+            background-color: #caf2ca;
+            border-left: 5px solid #54e238;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 1.2em;
+            line-height: 1.8;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .main-paragraph::before {
+
+            font-size: 2.5em;
+            position: absolute;
+            top: -10px;
+            left: -15px;
+            color: #0f9916;
+        }
+
+
+        .main-paragraph span {
+            font-weight: bold;
+            color: #2c502e;
+        }
+
+        /* Estilo para los textos que aparecen con animación */
+        .pop-text {
+            opacity: 0;
+            transform: scale(0.8);
+            animation: pop 0.6s forwards;
+        }
+
+        @keyframes pop {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Estilo de las listas */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+ 
+
+        /* Estilo de las tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #257025;
+            color: white;
+        }
+
+        td {
+            background-color: #ecf0f1;
+        }
+
+        /* Estilo de las imágenes */
+        section img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* Estilo de los botones */
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+        main {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 20px 30px rgb(45, 131, 48);
+        } 
+
+        footer {
+        background-color: #859933;
+        color: white;
+        text-align: center;
+        padding: 7px;
+        position: block;
+        width: 100%;
+        bottom: 0;
+        }
+
+</style>
+<body>
+    <header>
+        <div class="menu-container">
+     
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+    
+            
+            <div class="menu" id="menu">
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                  
+                    <li><a href="javascript:void(0)" onclick="toggleSubmenu()">Materias</a>
+                        <ul class="submenu" id="submenu">
+                            <li><a href="matematicas.html">Matemáticas</a></li>
+                            <li><a href="ecosistemas.html">Ecosistemas</a></li>
+                            <li><a href="Humanidades.html">Humanidades</a></li>
+                            <li><a href="ingles.html">Ingles</a></li>
+                            <li><a href="lengua.html">Lengua y <br> Comunicaciones </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+          </div>
+      
+    <center>
+        <h2> <p style="color: white;"> Comparación de Casos Reales de Ciudades
+            <br> Sostenibles en la Gestión del Agua </p> </h2>
+    </center>
+</header>
+<nav>
+    <a href="menu.html"></a>
+    <a href="#contacto"></a>
+</nav>
+
+   <br>
+   <br>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Introducción -->
+        <section>
+            <h2>Introducción</h2>
+            <p class="main-paragraph pop-text">El agua es uno de los recursos más importantes que tenemos, pero muchas ciudades del mundo enfrentan problemas para gestionarla de manera eficiente. Esto se debe a que cada vez hay más personas viviendo en ciudades, y el cambio climático está afectando la disponibilidad de agua. En este ensayo, voy a comparar algunas ciudades que han aplicado soluciones innovadoras para gestionar el agua de forma sostenible, como <span>Singapur</span>, <span>Copenhague</span>, <span>Melbourne</span> y <span>Bogotá</span>. A través de estos ejemplos, veremos cómo cada lugar enfrenta diferentes retos y ha logrado mejoras en el uso y cuidado del agua.</p>
+        </section>
+
+        <!-- Caso Singapur -->
+        <section>
+            <h2>Singapur: Reciclaje de Agua y Autosuficiencia</h2>
+            <p class="main-paragraph pop-text">Singapur es una ciudad que no tiene muchas fuentes naturales de agua y depende de otros países para obtenerla, lo cual es un gran problema. Para solucionarlo, Singapur creó un sistema llamado NEWater, que recicla el agua que ya ha sido utilizada para poder usarla otra vez después de limpiarla. Este sistema puede cubrir el 40% del agua que necesitan en la ciudad, ayudando a que no tengan que depender tanto de otros países. Además, también recolectan agua de lluvia en unos depósitos especiales. Gracias a estas medidas, Singapur ha logrado ser casi autosuficiente en agua, lo cual es increíble para una ciudad con tan pocos recursos naturales.</p>
+        </section>
+
+        <!-- Caso Copenhague -->
+        <section>
+            <h2>Copenhague: Infraestructura Verde para las Lluvias Extremas</h2>
+            <p class="main-paragraph pop-text">En Copenhague, el cambio climático está provocando lluvias más fuertes y frecuentes, lo que causa inundaciones. Para enfrentar este problema, la ciudad implementó un plan llamado Plan de Gestión de Lluvias Torrenciales. Este plan usa una combinación de infraestructuras verdes, como jardines de lluvia y calles que pueden absorber el agua, para que cuando llueva mucho, la ciudad no se inunde. Estas medidas no solo ayudan a evitar las inundaciones, sino que también mejoran el ambiente urbano al crear más áreas verdes.</p>
+        </section>
+
+        <!-- Caso Melbourne -->
+        <section>
+            <h2>Melbourne: Ahorro de Agua en Épocas de Sequía</h2>
+            <p class="main-paragraph pop-text">Melbourne, en Australia, es una ciudad que tiene que lidiar con sequías frecuentes. Una de las más largas fue entre 1997 y 2009, donde casi no llovió. Durante ese tiempo, la ciudad aplicó medidas para ahorrar agua, como reducir el consumo y mejorar la eficiencia en su uso, logrando que cada persona usara casi la mitad del agua que antes. Además, Melbourne desarrolló un sistema llamado Ciudad como Cuenca, que recolecta agua de lluvia y trata las aguas residuales para poder usarlas en parques y jardines.</p>
+        </section>
+
+        <!-- Caso Bogotá -->
+        <section>
+            <h2>Bogotá: Protección de Ecosistemas Naturales</h2>
+            <p class="main-paragraph pop-text">En Bogotá, Colombia, la estrategia se basa en cuidar los páramos, que son zonas naturales de montaña que capturan el agua de la lluvia y la almacenan, proveyendo agua para la ciudad. Bogotá trabaja en proteger estos lugares, que son fundamentales para el suministro de agua, evitando que se usen para actividades agrícolas o ganaderas. Además, la ciudad ha aumentado el tratamiento de aguas residuales para evitar la contaminación de los ríos.</p>
+        </section>
+
+        <!-- Tabla de resultados -->
+        <section>
+            <h2>Resultados del Proyecto de Gestión del Agua</h2>
+            <table>
+                <tr>
+                    <th>Ciudad</th>
+                    <th>Solución Implementada</th>
+                    <th>Resultado</th>
+                </tr>
+                <tr>
+                    <td>Singapur</td>
+                    <td>NEWater (reciclaje de agua) y recolección de agua de lluvia</td>
+                    <td>Autosuficiencia en un 40% del consumo de agua</td>
+                </tr>
+                <tr>
+                    <td>Copenhague</td>
+                    <td>Infraestructura verde para gestionar lluvias torrenciales</td>
+                    <td>Reducción de inundaciones y creación de más áreas verdes</td>
+                </tr>
+                <tr>
+                    <td>Melbourne</td>
+                    <td>Ahorro de agua durante sequías y sistema Ciudad como Cuenca</td>
+                    <td>Ahorro del 50% del agua utilizada por persona</td>
+                </tr>
+                <tr>
+                    <td>Bogotá</td>
+                    <td>Protección de páramos y tratamiento de aguas residuales</td>
+                    <td>Mejor conservación de fuentes de agua y reducción de contaminación</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Conclusión -->
+        <section>
+            <h2>Conclusión</h2>
+            <p class="main-paragraph pop-text">Cada ciudad tiene su propia forma de gestionar el agua de manera sostenible según sus necesidades y sus recursos. Singapur nos enseña cómo el reciclaje del agua puede ayudar a una ciudad con pocos recursos naturales. Copenhague muestra cómo prepararse para lluvias intensas utilizando infraestructura verde. Melbourne se enfoca en el ahorro de agua durante las sequías, y Bogotá destaca la importancia de cuidar los ecosistemas naturales para asegurar el agua. Estos ejemplos son muy útiles para entender que la gestión del agua puede variar según el lugar, pero todas las ciudades pueden aprender de estas soluciones para enfrentar sus propios desafíos.</p>
+        </section>
+
+    </main>
+</main>
+<br>
+<br>
+<br>
+<footer>
+    <p>&copy; 2024 Página de Paec. Todos los derechos reservados a "Los tops globales".</p>
+</footer>
+
+      </body>
+      </html>
+      

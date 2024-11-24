@@ -1,0 +1,213 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('open');
+        }
+
+        function toggleSubmenu() {
+            document.getElementById('submenu').classList.toggle('open');
+        }
+            </script>
+    <style>
+                table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 10px;
+       
+        }
+
+        table th {
+            background: #007c0b;
+            color: white;
+        }
+
+        table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        table tr:hover {
+            background: #f1f1f1;
+        }
+
+        ol {
+            width: 60%;
+            margin: 0 auto;
+            background: #caf2ca;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        ol li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        
+
+
+    </style>
+    </head>
+    <body>
+    
+    <header>
+        <div class="menu-container">
+     
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+    
+            
+            <div class="menu" id="menu">
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                  
+                    <li><a href="javascript:void(0)" onclick="toggleSubmenu()">Materias</a>
+                        <ul class="submenu" id="submenu">
+                            <li><a href="matematicas.html">Matemáticas</a></li>
+                            <li><a href="ciencias.html">Materia y sus interacciones</a></li>
+                            <li><a href="Humanidades.html">Humanidades</a></li>
+                            <li><a href="ingles.html">Ingles</a></li>
+                            <li><a href="lengua.html">Lengua y <br> Comunicaciones </a></li>
+    
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+          </div>
+
+         <h1> <font face="times new roman"> <p style="color: #ffffff;"> HUMEDAD AMBIENTAL</p> </font> </h1>
+     </header>
+     <div class="linea"></div>
+
+     <br>
+     <br>
+
+
+
+    <main>
+        <h1><center> <font face="times new roman">OBJETIVO </font> </center> </h1>
+
+        <br>
+
+        <center> <font face="arial">
+            <ol>Comprender y aplicar los diferentes métodos científicos y 
+            prácticos que permiten determinar la humedad relativa presente en la atmósfera, destacando
+             la importancia de esta medida en la predicción del clima, el análisis de condiciones ambientales
+              y su impacto en la vida diaria. Este proyecto busca no solo calcular la humedad, sino también
+               entender cómo variables como la temperatura y la presión atmosférica influyen en este fenómeno,
+             fomentando una apreciación más profunda de los procesos naturales que afectan nuestro entorno. </font> </center>
+</ol>
+       <br>
+    </main>
+    <main>
+      <h1><center><font face="times new roman"> Materiales</font> </center> </h1>
+    
+        <br>
+
+        <center>
+            <ol>
+            2 Termómetros ambientales<br>
+            Envase tetrapak<br>
+            Algodón<br>
+            Agua<br>
+            Tablas psicométricas de humedad
+        </ol>
+          </center>
+
+        <br>
+</main>
+<main>
+            <center> <h1>Proceso del experimento </h1> </center>
+
+            <br>
+            <br>
+
+            <ol>Este proyecto consistió en utilizar dos termómetros
+                ambientales para medir la temperatura del Bulbo seco y
+               Bulbo húmedo y con esto sacar la diferencia que nos
+                ayuda para sacar cuanta humedad relativa tiene, En la
+                siguiente tabla están los resultados del experimento.</ol>
+
+            <br>
+            <ol>1.- Se realiza una perforación lateral en el envase tetrapak. Se agrega agua hasta un nivel inferior a la perforación.</ol>
+            <br>
+            <ol>2.- Con el algodón cubrir la parte del bulbo del termómetro y dejar una tira de algodón que entre en el agua. A esto se le conoce como termómetro con bulbo húmedo.</ol>
+            <br>
+            <ol>3.- Se coloca el segundo termómetro en ambiente. Se le conoce como termómetro con bulbo seco.</ol>
+            <br>
+            <ol>4.- Se toman ambas medidas de temperatura. Y se obtiene la diferencia.</ol>
+            <br>
+            <ol>5.- Se obtiene la humedad relativa utilizando la tabla psicométrica de humedad a una presión atmosférica de aprox. 1,013mb o 1 atm, o 760 mmhg.</ol>
+            
+
+        <br>
+
+                <br></main>
+                <br>
+<main>
+    
+                <center> <h3> RESULTADOS: </h3> </center>
+    
+                <center><table ></center>
+                    <tr>
+                        <th></th>
+                        <th>Temp. Bulbo Seco</th>
+                        <th>Temp. Bulbo Humedo</th>
+                        <th>Diferencia</th>
+                        <th>Humedad Relativa "HR"</th>
+                        </tr>
+                        <tr>
+                            <td>Exterior Sol</td>
+                            <td>26°C</td>
+                            <td>23°C</td>
+                            <td>3</td>
+                            <td>77%</td>
+                            </tr>
+                            <tr>
+                                <td>Exterior sombra</td>
+                                <td>25°C</td>
+                                <td>20°C</td>
+                                <td>5</td>
+                                <td>63%</td>
+                            </tr>
+                            <tr>
+                                <td>Interior</td>
+                                <td>24°C</td>
+                                <td>21°C</td>
+                                <td>3</td>
+                                <td>76%</td>
+                            </tr>
+                        </table>
+
+                        <br>
+                        <br>
+
+      <section>
+<img src="images/1.jpg">
+<img src="images/2.jpg">
+<img src="images/3.jpg">
+      </section>
+
+</main>
+<br>
+<br>
+<br>
+<footer>
+    <p>&copy; 2024 Página de Paec. Todos los derechos reservados a "Los tops globales".</p>
+</footer>
+</body>
+</html>
+      

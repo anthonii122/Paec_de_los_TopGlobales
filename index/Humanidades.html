@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAEC</title>
+    <link rel="stylesheet" href="style.css">
+
+
+   <script>
+    
+function toggleMenu() {
+    document.querySelector('.hamburger').classList.toggle('open');
+    document.getElementById('menu').classList.toggle('open');
+}
+
+
+function toggleSubmenu() {
+    document.getElementById('submenu').classList.toggle('open');
+}
+</script>
+</head>
+<style>  
+        .container {
+            display: flex;
+            flex-wrap: wrap; 
+            background-color: #ffffff; 
+            max-width: 1000px; 
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px rgb(45, 131, 48);
+        }
+
+     
+        .text-section {
+            flex: 1; 
+            padding: 20px 30px;
+            text-align: justify;
+        }
+
+        .text-section h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #007bff; 
+        }
+
+        .text-section p {
+            font-size: 23px;
+            line-height: 1;
+            color: #255229; 
+        }
+
+        /* Sección de la imagen */
+        .image-section {
+            flex: .4; /* Ocupa el 50% del ancho disponible */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff; /* Fondo gris si no hay imagen */
+            box-shadow: 0 20px 40px rgb(45, 127, 143);
+        }
+
+        .image-section img {
+            width: 300px; /* Imagen ocupa todo el ancho disponible */
+    
+            height: 300;
+            object-fit: cover; /* Mantener proporciones */
+        }
+
+        /* Estilo responsivo */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Cambia a diseño vertical */
+            }
+
+            .text-section, .image-section {
+                flex: none; /* Elimina el ancho fijo */
+                width: 100%; /* Ocupan todo el ancho */
+            }
+
+            .image-section img {
+                max-width: 100%; /* Imagen adaptable al ancho */
+            }
+        }
+
+</style>
+<body>
+
+<header>
+
+    <div class="menu-container">
+     
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+              
+                <li><a href="javascript:void(0)" onclick="toggleSubmenu()">Materias</a>
+                    <ul class="submenu" id="submenu">
+                        <li><a href="matematicas.html">Matemáticas</a></li>
+                        <li><a href="ecosistemas.html">Ecosistemas</a></li>
+                        <li><a href="Humanidades.html">Humanidades</a></li>
+                        <li><a href="ingles.html">Ingles</a></li>
+                        <li><a href="lengua.html">Lengua y <br> Comunicaciones </a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+      </div>
+  
+      
+ 
+       <h1> <font face="times new roman"> <p style="color: #ffffff;"> COMBATE DE LA LLUVIA </p> </font> </h1> 
+      <br>
+
+    </header>
+    <nav>
+        <a href="menu.html"></a>
+        <a href="#contacto"></a>
+    </nav>
+
+    <br>
+    <br>
+
+   <font face="times new roman"></font>
+   
+   <div class="container">
+
+    <div class="text-section">
+        <h1>Las Leyendas Mesoamericanas</h1>
+        <h2><p>
+            Las leyendas mesoamericanas son más que explicaciones de fenómenos naturales; reflejan la cosmovisión 
+            de las comunidades indígenas, transmitiendo valores como la humildad, el respeto a la tierra y las 
+            deidades, y la importancia de la unidad.
+        </p>
+        <p>
+            Estas narrativas, cargadas de simbolismo, enseñan a mantener el equilibrio espiritual y ecológico 
+            a través de rituales y ceremonias. Preservarlas es esencial para mantener vivas las raíces culturales 
+            y espirituales de las comunidades.
+        </p></h2>
+        <br>
+        <br>
+
+        <h1>EL COMBATE DE LA LLUVIA</h1>
+        <h2> <p>  leyenda, como muchas otras en las culturas mesoamericanas, no solo busca explicar los fenómenos naturales como la lluvia, 
+            sino también enseñar lecciones sobre la humildad, el respeto hacia la tierra y las deidades, y la importancia de la unidad y 
+            la armonía dentro de la comunidad. La conexión con la naturaleza y las deidades es central en la vida de los pueblos indígenas,
+             y esta leyenda subraya cómo los rituales y las ceremonias son una forma de mantener ese equilibrio y buscar la redención cuando
+              se pierde el respeto por el orden natural.
+      </p></h2>
+    </div>
+
+    <div class="image-section">
+        <img src="images/huma2.png" alt="Imagen de leyendas mesoamericanas">
+    </div>
+</div>
+ 
+</main>
+<br>
+<br>
+<br>
+<footer>
+    <p>&copy; 2024 Página de Paec. Todos los derechos reservados a "Los tops globales".</p>
+</footer>
+</body>
+</html
